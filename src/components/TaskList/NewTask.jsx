@@ -1,0 +1,31 @@
+import React from 'react'
+
+const NewTask = ({data}) => {
+  return (
+       <div className='flex-shrink-0 h-full w-[280px] p-5 bg-blue-400 rounded-xl'>
+
+        <div className='flex justify-between items-center '>
+            <h3 className='bg-red-600 text-s px-3 py-1 rounded'>
+                  {data.category}
+            </h3>
+            <h4 className='text-sm'>
+                {data.date}
+            </h4>
+        </div>
+        <h2 className='mt-3 text-xl font-2xl'>
+           {data.title}
+        </h2>
+        
+        <p className='text-sm mt-1'>
+            {data.description}
+        </p>
+         <div className=' flex items-center justify-center mt-4 bg-green-400 p-1 rounded w-40'>
+            <button >
+                accept Task
+            </button>
+        </div>
+     </div>
+  )
+}
+
+export default NewTask
